@@ -32,10 +32,10 @@ body, html{
     .grid-container{
         display: grid;
         grid-template-areas:
-        "nav nav"
-        "section main"
+        "nav section"
+        "nav main"
         "footer main";
-        grid-template-columns: 1fr 85%;
+        grid-template-columns: 1fr 87%;
     }  
 
     main .grid{
@@ -50,12 +50,34 @@ body, html{
     margin: 0;
     }
 
-    section{
-        height: 100vh;
+
+    .burger{
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .navi ul{
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .navi ul li{
+        padding: .5rem;
+    }
+
+    .navi ul li:hover{
+        color: #EEEEEE;
+        cursor: pointer;
     }
 
     footer{
-        padding: 2rem;
+        background-color: #00939a;
     }
 
 }
@@ -66,7 +88,6 @@ nav{
     background-color: #00ADB5;
     color: #222831;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     align-content: center;
     padding: 1rem;
@@ -85,6 +106,12 @@ nav{
     .navi{
         display: none ;
     }
+
+nav{
+ display: flex;
+    justify-content: space-between;   
+}
+    
 }
 
 
@@ -141,20 +168,35 @@ p{
 
 }
 
+.card h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.card p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+
 @media screen and (max-width: 575px) {
     .card-pc{
         display: none ;
     }
 
+    footer{
+    background-color: #00ADB5;
+    }
 }
-
-
 
 
 .character{
     margin-bottom: .5rem;
-    width: 100%;
-    height: auto;
+    height: 300px;
 }
 
 .fivestar{
@@ -192,7 +234,15 @@ p{
 
 footer{
     grid-area: footer;
-    background-color: #00ADB5;
     color: #222831;
     padding: 2rem 1rem 1rem 1rem;
+}
+
+footer a{
+    color: #222831;
+}
+
+footer a:hover{
+    color: #EEEEEE;
+    cursor: pointer;
 }
